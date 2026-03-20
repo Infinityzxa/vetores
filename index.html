@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro de Vendas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastro de Vendas</h1>
+        </header>
+
+        <section class="form-section">
+            <form id="venda-form">
+                <div class="input-group">
+                    <input type="text" id="vendedor" placeholder="Nome do vendedor" autocomplete="off">
+                    <input type="number" id="valor" placeholder="Valor da venda" step="0.01">
+                    <button type="submit" id="btn-cadastrar">Cadastrar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <div class="table-header">
+                <h2>Lista de Vendas</h2>
+                <div class="actions-header">
+                    <button id="btn-remover-ultimo" class="btn-secondary">Remover Último</button>
+                    <button id="btn-limpar-tudo" class="btn-danger">Limpar Tudo</button>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Vendedor</th>
+                            <th>Valor</th>
+                            <th>Desconto</th>
+                            <th>Valor Final</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vendas-table-body">
+                        <!-- Vendas serão inseridas aqui -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
